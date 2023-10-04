@@ -1,11 +1,29 @@
 
 #kopje{background-color:#212121 ; font-size:xx-large; color:#9908e7; margin:0%;}
 body { background-color:#0f0f0f; margin: 0px;} 
+
 #knop { font-size:xx-large; color:white; position: absolute#; top: 50%;left: 50%; 
 transform:(-50%,-50%); } 
 
-video {
-width: 100%;
-height: 500%;
-z-index: -1;
+#knopje { 
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom:10px;
+background:transparent ;
+border: 1px solid white; 
+border-radius: 50px;
+position:absolute;
+transform:translate(-50%, -50%);
+top: 50%;
+left: 50%;
+font-size:xx-large;
+font-weight:bold;
+color:white; 
+text-decoration: none;}
+#background-video {
+  width: 100%;
+  height: 10%;
+  z-index: -1;
 }
+
