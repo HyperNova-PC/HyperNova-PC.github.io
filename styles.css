@@ -12,6 +12,7 @@
 background-color:black;
 font-size:xx-large;
 font-weight: bold;
+font-family: "priori-sans", sans-serif;
 color:white; 
 margin:0%; 
 padding-top: 4px;
@@ -22,7 +23,7 @@ padding-left: 4px;
 #kopje2{
   background-color:aqua;
   font-size:xx-large;
-  font-weight:bold;
+  font-family: "priori-sans", sans-serif;
   color:white;
   margin:0%;
   padding-top: 4px;
@@ -32,11 +33,10 @@ padding-left: 4px;
 
 /***** Dingen voor de kopjes *****/
 
-
-
 /***** Dingen voor de Navbars *****/
 #navbar1 { 
-font-weight:bold;
+font-family: "t-26 carbon", sans-serif;
+
 color:purple; 
 text-decoration: none;
 padding-left: 4px;
@@ -44,7 +44,7 @@ z-index: -1;
 }
 
 #navbar2 {
-font-weight:bold;
+font-family: "priori-sans", sans-serif;
 color:purple; 
 text-decoration: none;
 padding-left: 10px;
@@ -52,8 +52,6 @@ z-index: -1;
  }
 
 /***** Dingen voor de Navbars *****/
-
-
 
 /***** Dingen voor de knopjes *****/
 #knop { font-size:xx-large; color:white; position: absolute#; top: 50%;left: 50%; 
@@ -73,7 +71,8 @@ transform:translate(-50%, -50%);
 top: 50%;
 left: 50%;
 font-size:xx-large;
-font-weight:bold;
+font-family: "priori-sans", sans-serif;
+font-weight:700; 
 color:white; 
 text-decoration: none;
 }
@@ -98,30 +97,55 @@ text-decoration: none;
   padding-left: 0%;
 }
 
-.container {
+.container-list {
+  display: flex;
+  /* justify-content: ; */
+  flex-wrap: nowrap;
+  border: 2px solid purple;
+  width: 95%;
+  height: 750px;
+  margin: 0 auto;
+  
+}
+
+
+.container-products {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 
-
-  /* border: 1px solid black; */
-  width: 90%;
-  height: 300px;
+  width: 95%;
+  height: 700px;
   margin: 0 auto;
-  border: 10px solid color:purple;
+  border: 3px solid black;
 }
 
+
 .item {
- width: 20% ;
- height: 30% ;
+ width: 15% ;
+ height: 200px ;
  background-color: #fb7185;
  padding: 1em;
  font-weight: 700;
  color: black;
  text-align: center;
- border: 3px solid color:red;
+ border: 3px solid red;
  border-radius: 10px; 
+  
 }
+/***** Dingen voor de Pc plaatjes *****/
 
-
+/***** De about us sectie *****/
+#aboutuskopje {
+float:center ;
+font-family: "priori-sans", sans-serif;
+font-size:30px;
+font-weight:1000;
+}
+#introductie {
+font-family: "priori-sans",sans-serif;
+font-size: 26px;
+line-height: 32px;
+font-weight:thin;
+}
