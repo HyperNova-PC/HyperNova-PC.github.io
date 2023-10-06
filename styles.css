@@ -4,7 +4,27 @@
 
 /* */
 
+:root /* color */{
+  --color-border-container-list: #d719d7;
+  --color-border-container-products: #fb7185;
+  --color-border-items: #20242f;
+  --color-test-background: #fb7185;
+  --dark: #78fad1;
+  --light: #ffffff;
+  --success: #0abf30;
+  --error: #e24d4c;
+  --warning: #e9bd0c;
+  --info: #3498db;
+  --random: #eb43ff;
+}
 
+:root /* lengths */ {
+  --aspect-ratio-pictures-min: 80px;
+  --aspect-ratio-pictures-max: 120px;
+  --aspect-ratio-16_9: 56.25%;
+  --aspect-ratio-1_1: 100%;
+  --aspect-ratio-4_3: 75%;
+}
 
 
 /***** Dingen voor de kopjes *****/
@@ -21,7 +41,7 @@ padding-left: 4px;
 }
 
 #kopje2{
-  background-color:aqua;
+  background-color: var(--color-test-background);
   font-size:xx-large;
   font-family: "priori-sans", sans-serif;
   color:white;
@@ -30,6 +50,8 @@ padding-left: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
 }
+
+
 
 /***** Dingen voor de kopjes *****/
 
@@ -44,12 +66,22 @@ z-index: -1;
 }
 
 #navbar2 {
-font-family: "priori-sans", sans-serif;
+font-family: "t-26 carbon", sans-serif;
 color:purple; 
 text-decoration: none;
 padding-left: 10px;
 z-index: -1;
  }
+
+#logo {
+  float: left;
+  width: 42px;
+  height: 38px;
+  padding-right: 8px;
+
+}
+
+
 
 /***** Dingen voor de Navbars *****/
 
@@ -89,6 +121,18 @@ text-decoration: none;
 /***** Dingen voor de videos *****/
 
 /***** Dingen voor de Pc plaatjes *****/
+.div {
+  display: block;
+}
+
+.body{
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+}
+
 #plaatjes {
   width: 30px;
   height: auto;
@@ -96,44 +140,101 @@ text-decoration: none;
   /*float: left;*/
   padding-left: 0%;
 }
-
-.container-list {
-  display: flex;
-  /* justify-content: ; */
-  flex-wrap: nowrap;
-  border: 2px solid purple;
-  width: 95%;
-  height: 750px;
-  margin: 0 auto;
+#Pc-header {
+  height: 632;
+  width: 2048;
+  background-color: var(--color-test-background);
   
 }
 
+header{
+  display: block;
+}
+
+.poster{
+  background-color: var(--black);
+  height: 500px;
+  z-index: -1;
+}
+
+
+
+
+.page-header {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  border-bottom: 2px solid transparant;
+
+  height: 100px;
+  width: 100%;
+  display:flex;
+  align-items: center;
+
+}
+
+
+
+.container-list {
+  display: flex;
+  justify-content: flex-end; 
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  border: 2px solid var(--color-border-container-list);
+  max-width: 100%;
+  height: 750px;
+  margin: 0;
+}
 
 .container-products {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 80px;
+  margin-right: 15%;
+  
 
-  width: 95%;
+  min-width: 800px;
+  max-width: 800px;
   height: 700px;
-  margin: 0 auto;
-  border: 3px solid black;
+  border: 10px solid var(--color-border-container-products);
+  float: right;
+  padding-top: 1ch;
+  aspect-ratio: var(--aspect-ratio-16_9);
 }
-
 
 .item {
- width: 15% ;
- height: 200px ;
- background-color: #fb7185;
+ display: flex;
+ min-width: var(--aspect-ratio-pictures-min);
+ max-width: var(--aspect-ratio-pictures-max);
+ min-height: var(--aspect-ratio-pictures-min);
+ max-height: var(--aspect-ratio-pictures-max);
+  
+ background-color: var(--color-test-background);
  padding: 1em;
  font-weight: 700;
- color: black;
- text-align: center;
- border: 3px solid red;
- border-radius: 10px; 
+ color: var(--black);
+ justify-content: center;
+ align-items: center;
+ border: 3px solid var(--color-border-items); 
+ position: relative;
+ aspect-ratio: var(--aspect-ratio-16_9);
+}
+
+
+
+.Pc-pics {
+  position: relative;
+  height: 100% ;
+  width: 100% ;
   
 }
+
+
 /***** Dingen voor de Pc plaatjes *****/
 
 /***** De about us sectie *****/
