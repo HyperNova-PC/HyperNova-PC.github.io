@@ -17,42 +17,32 @@
   
 <!----  Site naam en Navbar ----->
 
-   <header class="page-header" id="kopje2">
-     <div>
-       <div>
-          Hypernova
-          <a href= index.html> 
-            <img src="galaxy.png" alt="logo" id="logo">
-           </a>
-       </div>
-        
-
-        <div>
-          <a href="pc.html" id="navbar1"> Gaming PCs </a> 
-        </div>
-
-        <div>
+<body>
+  <header id="myHeader" class="header">
+     <div class="page-header">
+          <a href= index.html id="navbar2" style="color:white;"> <img src="galaxy.png" alt="logo" id="logo"> HyperNova</a> 
+          <a href="pc.html" id="navbar2"> Gaming PCs </a> 
           <a href="AboutUs.html" id="navbar2"> About us </a>
-          
-        </div>
-
-     
-        <div>
-          <a href="Checkout.html" id="navbar2">Checkout </a> 
-        </div>
+          <a href="Checkout.html" id="navbar2"> Checkout </a> 
      </div>
-   </header>  
+  </header>
+  <script>
+     window.onscroll = function() {myFunction()};
 
-  <body style="background-color: white; margin: 0px;">
-    
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
 
-    <h2 style="color:white" >
-      <a href="pc.html" id="navbar1"> Gaming PCs </a> 
-      <a href="AboutUs.html" id="navbar2"> About us </a> 
-      <a href="Checkout.html" id="navbar2">Checkout </a> 
-    </h2>
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("scrolled");
+        }
+        else {
+          header.classList.remove("scrolled");
+        }
+      }
+  </script>
 
-  </body>
+</body>
   
 <!---- Site naam en Navbar ----->
 
