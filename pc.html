@@ -20,29 +20,35 @@
 <body>
   <header id="myHeader" class="header">
      <div class="page-header">
-          <a href= index.html id="navbar2" style="color:white;"> <img src="galaxy.png" alt="logo" id="logo"> HyperNova</a> 
-          <a href="pc.html" id="navbar2"> Gaming PCs </a> 
-          <a href="AboutUs.html" id="navbar2"> About us </a>
-          <a href="Checkout.html" id="navbar2"> Checkout </a> 
-          <a href="Checkout.html"> <img src="shopping_cart3.png" alt="cart" class="checkout"> </a>
-     </div>
+       <a href= index.html id="navbar2"> <img src="HyperNova.png" alt="logo" id="logo"> </a> 
+        <a href="pc.html" id="navbar2"> Gaming PCs </a> 
+        <a href="AboutUs.html" id="navbar2"> About us </a>
+       
+        <a href="Checkout.html" style="float:right"> <img src="shopping_cart3.png" alt="cart" class="checkout"> </a>
+       
+      </div>
   </header>
-  <script>
-     window.onscroll = function() {myFunction()};
+  
+  <!---- Script voor scrollen ----->
 
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
+  <!-- Dit script zorgt ervoor dat de kleuren van de header mooi veranderen --->
+  <script>
+     window.onscroll = function() {myFunction()}; /* Hier wordt een functie geroepen wanneer er gescrolled wordt */
+
+      var header = document.getElementById("myHeader"); /* Variabele die de myHeader id oproept */
+      var sticky = header.offsetTop; /* Variabele die kijkt naar de top van de header */
 
       function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("scrolled");
+        if (window.pageYOffset > sticky) { /* Als er een offset plaatvindt (dus de offset is groter dan de huidige offset) */
+          header.classList.add("scrolled"); /* Voeg de class scrolled toe (staat in styles) */
         }
         else {
-          header.classList.remove("scrolled");
+          header.classList.remove("scrolled"); /* Haal de class scrolled weg */
         }
       }
   </script>
-
+<!---- Script voor scrollen ----->
+  
 </body>
   
 <!---- Site naam en Navbar ----->

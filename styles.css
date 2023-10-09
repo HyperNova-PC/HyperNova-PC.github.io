@@ -2,16 +2,18 @@
 #achtergrond { background-color: black; margin: 0px;} 
 
 
-/* */
+/* De root geeft ons de mogelijkheid om overal een variabele te plaatsen met de juiste waarde */
+/* Hierdoor kunnen wij gemakkelijk de juiste kleuren en maten vinden */
+/* Deze 2 roots zijn appart voor gemak, het veranderd de functie van de root niet */
 
 :root /* color */{
   --color-border-container-list: #d719d7;
   --color-border-container-products: #fb7185;
   --color-border-items: #20242f;
   --color-test-background: #fb7185;
-  --dark: #78fad1;
+  --color-border-header-test: #78fad1;
   --light: #ffffff;
-  --success: #0abf30;
+  --color-background-header-test: #0abf30;
   --error: #e24d4c;
   --warning: #e9bd0c;
   --info: #3498db;
@@ -86,11 +88,10 @@ z-index: 51;
 
 #logo {
   float: left;
-  width: 42px;
-  height: 38px;
+  max-width: 275px;
+  height: auto;
   padding-right: 8px;
   z-index: 51;
-
 }
 
 
@@ -98,7 +99,7 @@ z-index: 51;
 /***** Dingen voor de Navbars *****/
 
 /***** Dingen voor de knopjes *****/
-#knop { font-size:xx-large; color:white; position: absolute#; top: 50%;left: 50%; 
+#knop { font-size:xx-large; color:white; position: absolute; top: 50%;left: 50%; 
 transform:(-50%,-50%); } 
 
 #knopje { 
@@ -153,31 +154,29 @@ text-decoration: none;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
-  
-  
 }
+/* zorgt voor de vorm van de header */
 
-#myHeader {
-  transition: all 0.3s ease;
 
-}
-
-.scrolled {
-  background: var(--color-background-header);
-  border-bottom: 1px solid var(--color-border-header);
-}
 
 .header {
-  position: fixed;
+  position: fixed; /* hiedoor blijft de header op dezelfde plek */
   left: 0;
   right: 0;
   top: 0;
   z-index: 50;
-  
+  transition: all 0.3s ease; /*zorgt ervoor dat er een vloeiende smooth beweging is naar de nieuwe kleuren */
+  background: rgb(0,0,0,0.0);
+  border-bottom: 2px solid rgb(0,0,0,0.0);
 }
+/* zorgt voor de locatie van de header en voor een smooth transition wanneer je scrolled */
 
 
-
+.header.scrolled{
+  background: var(--color-background-header-test);
+  border-bottom: 2px solid var(--color-border-header-test);
+}
+/* wanneer je scrolled worden de wardes van de background en border-bottom aangepast zodat het smooth is */
 
 
 
