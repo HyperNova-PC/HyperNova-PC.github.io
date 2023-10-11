@@ -12,8 +12,9 @@
   --color-border-items: #20242f;
   --color-test-background: #fb7185;
   --color-border-header-test: #78fad1;
-  --light: #ffffff;
   --color-background-header-test: #0abf30;
+  --color-text-navbar: #ffffff;
+  --light: #ffffff;
   --error: #e24d4c;
   --warning: #e9bd0c;
   --info: #3498db;
@@ -33,7 +34,7 @@
 
 /***** Dingen voor de kopjes *****/
 #kopje{
-background-color:black;
+background-color: black;
 font-size:xx-large;
 font-weight: bold;
 font-family: "priori-sans", sans-serif;
@@ -62,7 +63,7 @@ padding-left: 4px;
 /***** Dingen voor de Navbars *****/
 #navbar1 { 
 font-family: "t-26 carbon", sans-serif;
-color:purple; 
+color: var(--color-text-navbar); 
 text-decoration: none;
 padding-left: 24px;
 z-index: 51;
@@ -70,7 +71,7 @@ z-index: 51;
 
 #navbar2 {
 font-family: "t-26 carbon", sans-serif;
-color:purple; 
+color: var(--color-text-navbar); 
 text-decoration: none;
 padding-left: 20px;
 z-index: 51;
@@ -173,8 +174,8 @@ text-decoration: none;
 
 
 .header.scrolled{
-  background: var(--color-background-header-test);
-  border-bottom: 2px solid var(--color-border-header-test);
+  background: var(--color-background-header);
+  border-bottom: 2px solid var(--color-border-header);
 }
 /* wanneer je scrolled worden de wardes van de background en border-bottom aangepast zodat het smooth is */
 
@@ -201,11 +202,11 @@ text-decoration: none;
 
 .container-list {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: center; 
   flex-wrap: wrap;
   flex-direction: row;
   
-  border: 2px solid var(--color-border-container-list);
+  /* border: 2px solid var(--color-border-container-list); */
   max-width: 100%;
   height: 750px;
   margin: 0;
@@ -220,9 +221,10 @@ text-decoration: none;
   margin-right: 15%;
   
 
-  min-width: 800px;
-  max-width: 800px;
+  min-width: calc(24vw + 20px);
+  max-width: 70vw;
   height: 700px;
+  width: 100%;
   border: 10px solid var(--color-border-container-products);
   float: right;
   padding-top: 1ch;
@@ -231,10 +233,10 @@ text-decoration: none;
 
 .item {
  display: flex;
- min-width: var(--aspect-ratio-pictures-min);
- max-width: var(--aspect-ratio-pictures-max);
- min-height: var(--aspect-ratio-pictures-min);
- max-height: var(--aspect-ratio-pictures-max);
+ min-width: 10vw;
+ max-width: 20vw;
+ min-height: 10vw;
+ max-height: 20vw;
   
  background-color: var(--color-test-background);
  padding: 1em;
@@ -260,15 +262,28 @@ text-decoration: none;
 /***** Dingen voor de Pc plaatjes *****/
 
 /***** De about us sectie *****/
-#aboutuskopje {
-float:center ;
+/***** Dingen voor de about us ******/ 
+#aboutusbody{
+background-color: black;
+}
+#grootkopje {
 font-family: "priori-sans", sans-serif;
 font-size:30px;
 font-weight:1000;
+margin-top: 100px;
+color: white;
+margin-bottom:0px;
 }
-#introductie {
+.kopje{
+font-family: "priori-sans", sans-serif;
+font-size:28px;
+font-weight:700;
+margin-top:20px;
+color: white; 
+}
+.subtext {
 font-family: "priori-sans",sans-serif;
-font-size: 26px;
-line-height: 32px;
-font-weight:thin;
+font-size: 20px;;
+font-weight:200;
+color: white;
 }
