@@ -1,12 +1,18 @@
 /* weet niet waar dit moet*/
-#achtergrond { background-color: black; margin: 0px;} 
+#achtergrond {
+  background-color: black;
+  margin: 0px;
+}
 
 
 /* De root geeft ons de mogelijkheid om overal een variabele te plaatsen met de juiste waarde */
 /* Hierdoor kunnen wij gemakkelijk de juiste kleuren en maten vinden */
 /* Deze 2 roots zijn appart voor gemak, het veranderd de functie van de root niet */
 
-:root /* color */{
+:root
+
+/* color */
+  {
   --color-border-container-list: #d719d7;
   --color-border-container-products: #fb7185;
   --color-border-items: #20242f;
@@ -23,7 +29,10 @@
   --color-border-header: #504e4e;
 }
 
-:root /* lengths */ {
+:root
+
+/* lengths */
+  {
   --aspect-ratio-pictures-min: 80px;
   --aspect-ratio-pictures-max: 120px;
   --aspect-ratio-16_9: 56.25%;
@@ -33,24 +42,24 @@
 
 
 /***** Dingen voor de kopjes *****/
-#kopje{
-background-color: black;
-font-size:xx-large;
-font-weight: bold;
-font-family: "priori-sans", sans-serif;
-color:white; 
-margin:0%; 
-padding-top: 4px;
-padding-bottom: 4px;
-padding-left: 4px;
+#kopje {
+  background-color: black;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: "priori-sans", sans-serif;
+  color: white;
+  margin: 0%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
 }
 
-#kopje2{
+#kopje2 {
   background-color: var(--color-test-background);
-  font-size:xx-large;
+  font-size: xx-large;
   font-family: "priori-sans", sans-serif;
-  color:white;
-  margin:0%;
+  color: white;
+  margin: 0%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
@@ -61,20 +70,20 @@ padding-left: 4px;
 /***** Dingen voor de kopjes *****/
 
 /***** Dingen voor de Navbars *****/
-#navbar1 { 
-font-family: "t-26 carbon", sans-serif;
-color: var(--color-text-navbar); 
-text-decoration: none;
-padding-left: 24px;
-z-index: 51;
+#navbar1 {
+  font-family: "t-26 carbon", sans-serif;
+  color: var(--color-text-navbar);
+  text-decoration: none;
+  padding-left: 24px;
+  z-index: 51;
 }
 
 #navbar2 {
-font-family: "t-26 carbon", sans-serif;
-color: var(--color-text-navbar); 
-text-decoration: none;
-padding-left: 20px;
-z-index: 51;
+  font-family: "t-26 carbon", sans-serif;
+  color: var(--color-text-navbar);
+  text-decoration: none;
+  padding-left: 20px;
+  z-index: 51;
 }
 
 .checkout {
@@ -100,27 +109,33 @@ z-index: 51;
 /***** Dingen voor de Navbars *****/
 
 /***** Dingen voor de knopjes *****/
-#knop { font-size:xx-large; color:white; position: absolute; top: 50%;left: 50%; 
-transform:(-50%,-50%); } 
+#knop {
+  font-size: xx-large;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: (-50%, -50%);
+}
 
-#knopje { 
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 10px;
-padding-bottom:10px;
-background:transparent ;
-border: 1px solid white; 
-border-radius: 50px;
-position:absolute;
-z-index: 1;
-transform:translate(-50%, -50%);
-top: 50%;
-left: 50%;
-font-size:xx-large;
-font-family: "priori-sans", sans-serif;
-font-weight:700; 
-color:white; 
-text-decoration: none;
+#knopje {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 50px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: xx-large;
+  font-family: "priori-sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
 }
 
 /***** Dingen voor de knopjes *****/
@@ -136,7 +151,7 @@ text-decoration: none;
 
 /***** Dingen voor de header *****/
 
-.poster{
+.poster {
   background-color: black;
   height: 500px;
   z-index: 1;
@@ -145,40 +160,45 @@ text-decoration: none;
 .page-header {
   height: 100px;
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   background-color: var(--black);
-  font-size:xx-large;
+  font-size: xx-large;
   font-family: "priori-sans", sans-serif;
-  color:white;
-  margin:0%;
+  color: white;
+  margin: 0%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
 }
+
 /* zorgt voor de vorm van de header */
 
 
 
 .header {
-  position: fixed; /* hiedoor blijft de header op dezelfde plek */
+  position: fixed;
+  /* hiedoor blijft de header op dezelfde plek */
   left: 0;
   right: 0;
   top: 0;
   z-index: 50;
-  transition: all 0.3s ease; /*zorgt ervoor dat er een vloeiende smooth beweging is naar de nieuwe kleuren */
-  background: rgb(0,0,0,0.0);
-  border-bottom: 2px solid rgb(0,0,0,0.0);
+  transition: all 0.3s ease;
+  /*zorgt ervoor dat er een vloeiende smooth beweging is naar de nieuwe kleuren */
+  background: rgb(0, 0, 0, 0.0);
+  border-bottom: 2px solid rgb(0, 0, 0, 0.0);
 }
+
 /* zorgt voor de locatie van de header en voor een smooth transition wanneer je scrolled */
 
 
-.header.scrolled{
+.header.scrolled {
   background: var(--color-background-header);
   border-bottom: 2px solid var(--color-border-header);
 }
-/* wanneer je scrolled worden de wardes van de background en border-bottom aangepast zodat het smooth is */
 
+/* wanneer je scrolled worden de waardes van de background en border-bottom aangepast zodat het smooth is */
+/* Scrolled is hierbij de nieuwe class die hier ook gemaakt wordt. Het kan ook appart staan maar dit is handiger */
 
 
 /***** Dingen voor de header *****/
@@ -193,19 +213,20 @@ text-decoration: none;
   /*float: left;*/
   padding-left: 0%;
 }
+
 #Pc-header {
   height: 632;
   width: 2048;
   background-color: var(--color-test-background);
-  
+
 }
 
 .container-list {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  
+
   /* border: 2px solid var(--color-border-container-list); */
   max-width: 100%;
   height: 750px;
@@ -215,11 +236,10 @@ text-decoration: none;
 .container-products {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 80px;
-  margin-right: 15%;
-  
+
 
   min-width: calc(24vw + 20px);
   max-width: 70vw;
@@ -232,58 +252,84 @@ text-decoration: none;
 }
 
 .item {
- display: flex;
- min-width: 10vw;
- max-width: 20vw;
- min-height: 10vw;
- max-height: 20vw;
-  
- background-color: var(--color-test-background);
- padding: 1em;
- font-weight: 700;
- color: var(--black);
- justify-content: center;
- align-items: center;
- border: 3px solid var(--color-border-items); 
- position: relative;
- aspect-ratio: var(--aspect-ratio-16_9);
+  display: flex;
+  min-width: 5vw;
+  max-width: 20vw;
+  min-height: 5vw;
+  max-height: 20vw;
+
+  background-color: var(--color-test-background);
+  padding: 1em;
+  font-weight: 700;
+  color: var(--black);
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--color-border-items);
+  position: relative;
+  aspect-ratio: var(--aspect-ratio-16_9);
 }
 
 
 
 .Pc-pics {
   position: relative;
-  height: 100% ;
-  width: 100% ;
-  
+  height: 100%;
+  width: 100%;
+
 }
 
 
 /***** Dingen voor de Pc plaatjes *****/
 
-/***** De about us sectie *****/
-/***** Dingen voor de about us ******/ 
-#aboutusbody{
-background-color: black;
+
+/***** Dingen voor de about us ******/
+#aboutusbody {
+  background-color: black;
+}
+#imagepc {
+background-image: url(pc.jpg);
 }
 #grootkopje {
-font-family: "priori-sans", sans-serif;
-font-size:30px;
-font-weight:1000;
-margin-top: 100px;
-color: white;
-margin-bottom:0px;
+  font-family: "priori-sans", sans-serif;
+  font-size: 30px;
+  font-weight: 1000;
+  margin-top: 100px;
+  color: white;
+  margin-bottom: 0px;
+  text-align: center;
 }
-.kopje{
-font-family: "priori-sans", sans-serif;
-font-size:28px;
-font-weight:700;
-margin-top:20px;
-color: white; 
+
+/***** de opmaak voor de kopjes en de subteksten *****/
+.kopje {
+  font-family: "priori-sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: white;
 }
+
 .subtext {
-font-family: "priori-sans",sans-serif;
-font-size: 20px;;
-font-weight:200;
-color: white;
+  font-family: "priori-sans", sans-serif;
+  font-size: 20px;
+  ;
+  font-weight: 200;
+  color: white;
+}
+
+#kolom1 {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.0em;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#kolom {
+  float: left;
+  width: 20%;
+  border: white;
+  border-width: 1px;
+  margin: 3px;
+  text-align: center;
+  background-image: linear-gradient(#504e4e, black);
 }

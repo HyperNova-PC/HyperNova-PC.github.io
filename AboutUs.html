@@ -17,33 +17,64 @@ About us
         <a href="Checkout.html" style="float:right"> <img src="shopping_cart3.png" alt="cart" class="checkout"> </a>
        
       </div>
+    
+    <script>
+      window.onscroll = function() {myFunction()};
+
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("scrolled");
+        }
+        else {
+          header.classList.remove("scrolled");
+        }
+      }
+    </script>
+
+    
   </header>
+
 </body>
-<div>
-<h1 id="grootkopje">
+<!------- deze code gaat over de tekst, en gebruikt een div om alle tekst een losse box te maken. ------> 
+<div id="imagepc"> 
+<img src="pc.jpg" alt="pc">  
+</div>
+<h2 id="grootkopje">
 Selling explosivly powerfull PCs at a good price since 2015
-</h1>
-<h2 id="uskopje" class="kopje">
+</h2>
+<div id="kolom1">
+<div1 id="kolom">
+<h2 class="kopje">
 Our mission
-  </h2>
-<h3 id="us" class="subtext">
+</h2>
+<h4 class="subtext">
 Our mission here at HyperNova is to provide gamers all around the world with the best bang for their buck, while still being environmentally friendly. 
-</h3>
-<h4 id=gskopje class="kopje">
+</h4>
+</div1>
+<div2 id="kolom">
+<h4 class="kopje">
 Our history
 </h4>
 
-<h5 id="gs" class="subtext"> 
+<h6 class="subtext"> 
  Hypernova founded in 2015 by two passionate gamers, quickly became a prominent player in the gaming computer industry. The founders, Simon van den Bouwhuijsen and Philippe Karel, shared a common vision to provide top-tier gaming PCs and accessories to enthusiasts and professional gamers alike. Over the years, Hypernova has established itself as a reliable and innovative company dedicated to pushing the boundaries of gaming technology.
-</h5>
-<h6 class="kopje"> 
-Additional information
 </h6>
-<h7 class="subtext">
-Office and factory location
- Sweelinckplein 3, 5216 EG 's-Hertogenbosch
-
+</div2>
+<div3 id="kolom">
+<h7 class="kopje"> 
+Additional information
 </h7>
+<h8 class="subtext">
+Office and factory location :
+Sweelinckplein 3, 5216 EG 's-Hertogenbosch
+Bussiness email: HyperNova@computers.nl
+
+
+</h8>
+</div3>
 </div>
 
 
