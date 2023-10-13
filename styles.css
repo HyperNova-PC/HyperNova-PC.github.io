@@ -20,13 +20,13 @@
   --color-border-header-test: #78fad1;
   --color-background-header-test: #0abf30;
   --color-text-navbar: #ffffff;
+  --color-background-header: #0a101d;
+  --color-border-header: #504e4e;
   --light: #ffffff;
   --error: #e24d4c;
   --warning: #e9bd0c;
   --info: #3498db;
   --random: #eb43ff;
-  --color-background-header: #0a101d;
-  --color-border-header: #504e4e;
 }
 
 :root
@@ -123,7 +123,7 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid white;
   border-radius: 50px;
   position: absolute;
@@ -136,6 +136,16 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#knopje:hover {
+  background-color: #4c4343;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 40px;
 }
 
 /***** Dingen voor de knopjes *****/
@@ -206,14 +216,6 @@
 /***** Dingen voor de Pc plaatjes *****/
 
 
-#plaatjes {
-  width: 30px;
-  height: auto;
-  margin: 0%;
-  /*float: left;*/
-  padding-left: 0%;
-}
-
 #Pc-header {
   height: 632;
   width: 2048;
@@ -235,7 +237,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  
+
   min-width: 24vw;
   min-height: 24vw;
   height: 100%;
@@ -249,7 +251,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  
+
   min-width: 24vw;
   min-height: 24vw;
   height: 100%;
@@ -280,11 +282,16 @@
 
   background-color: var(--color-test-background);
   padding: 1em;
-  font-weight: 700;
-  color: var(--black);
   border: 3px solid var(--color-border-items);
+  transition: all 0.3s ease;
 }
 
+.item:hover {
+  background-color: var(--color-border-header-test);
+  border-bottom: 3px solid var(--color-background-header-test);
+  width: calc(15% + 60px);
+  
+}
 
 
 .Pc-pics {
@@ -302,9 +309,11 @@
 #aboutusbody {
   background-color: black;
 }
+
 #imagepc {
-background-image: url(pc.jpg);
+  background-image: url(pc.jpg);
 }
+
 #grootkopje {
   font-family: "priori-sans", sans-serif;
   font-size: 30px;
