@@ -57,8 +57,15 @@
 
 /***** Dingen voor de Navbars *****/
 .navbar {
-  padding-left: 30px;
   z-index: 51;
+  background: transparant;
+  border: transparant solid 3px;
+  border-radius: 50px;
+}
+
+.navbar:hover{
+  background: #6b6b6b;
+  
 }
 
 .navbar_inhoud {
@@ -150,18 +157,21 @@
 }
 
 .page-header {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 30px;
+  align-items: center;
   height: 100px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: var(--black);
-  font-size: xx-large;
-  font-family: "priori-sans", sans-serif;
-  color: white;
   margin: 0%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
+
+  background-color: var(--black);
+  font-size: xx-large;
+  font-family: "priori-sans", sans-serif;
+  color: white;
 }
 
 /* zorgt voor de vorm van de header */
@@ -169,13 +179,12 @@
 
 
 .header {
-  position: fixed;
-  /* hiedoor blijft de header op dezelfde plek */
+  position: fixed; /* hiedoor blijft de header op dezelfde plek */
   left: 0;
   right: 0;
   top: 0;
   z-index: 50;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; 
   /*zorgt ervoor dat er een vloeiende smooth beweging is naar de nieuwe kleuren */
   background: rgb(0, 0, 0, 0.0);
   border-bottom: 2px solid rgb(0, 0, 0, 0.0);
@@ -210,60 +219,39 @@
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-
+  row-gap: 100px;
   /* border: 2px solid var(--color-border-container-list); */
 }
 
-.container-products_top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 
-  min-width: 24vw;
-  min-height: 24vw;
-  height: 100%;
-  width: 100%;
-  border: 10px solid var(--color-border-container-products);
-  padding-top: 1ch;
-}
-
-.container-products_mid {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-
-  min-width: 24vw;
-  min-height: 24vw;
-  height: 100%;
-  width: 100%;
-  border: 10px solid var(--color-border-container-products);
-  padding-top: 1ch;
-}
-
-.container-products_bottom {
+.container-products{
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 
-  column-gap: 200px;
+  column-gap: 100px;
   row-gap: 50px;
   min-width: 24vw;
   min-height: 24vw;
   height: 100%;
   width: 100%;
   border: 10px solid var(--color-border-container-products);
-  padding-top: 1ch;
+  
 }
 
 .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   width: calc(15% + 50px);
   height: 100%;
 
   background-color: var(--color-test-background);
-  padding: 1em;
+  
   border: 3px solid var(--color-border-items);
   transition: all 0.3s ease;
 }
@@ -271,19 +259,24 @@
 .item:hover {
   background-color: var(--color-border-header-test);
   border-bottom: 3px solid var(--color-background-header-test);
-  width: calc(15% + 60px);
-  
 }
-
 
 .Pc-pics {
-  position: relative;
   height: 100%;
   width: 100%;
-
 }
 
+.container_pictures {
+  height: 100%;
+  width: 100%;
+  padding: 2em;
+  transition: all 0.3s ease;
+}
 
+.container_pictures:hover {
+  padding: 0;
+  padding: 0.8em
+}
 /***** Dingen voor de Pc plaatjes *****/
 
 
