@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Zet de taal naar Engels, niet echt belangrijk -->
 
-  <head>
-    <title> HyperNova Gaming PC's</title>
-    <link rel="icon" type="image/x-icon" href="/galaxy.png">
-    <link rel="stylesheet" href="styles.css"> 
-  </head>
+<head>
+  <title> HyperNova Gaming PC's</title> <!-- De site naam in de tab, elke tab heeft zijn eigen titel -->
+  <link rel="icon" type="image/x-icon" href="/galaxy.png"> <!-- Het icoontje naast de naam van de site -->
+  <link rel="stylesheet" href="styles.css"> <!-- Zorgt ervoor dat we styles.css kunnen importeren -->
+</head>
 
-  <body id="achtergrond">
-   <header class="header" id="myHeader">
-     <div class="page-header">
-          <div id="navbar2" style="color:white;"> <img src="HyperNova.png" alt="logo" id="logo"></div> 
-          <a href="pc.html" id="navbar2"> Gaming PCs </a>
-          <a href="AboutUs.html" id="navbar2"> About us </a>
-          <a href="Checkout.html" id="navbar2"> </a> 
-          <a href="Checkout.html" style="float:right"> <img src="shopping_cart3.png" alt="cart" class="checkout"> </a>
-     </div>
+<body id="achtergrond">
+  <header id="myHeader" class="header">
+    <nav class="page-header">
+      <div class="logoOffset">
+        <a href=index.html> <img src="HyperNova.png" alt="logo" id="logo"> </a>
+      </div>
+
+      <div class="navbar">
+        <a href="pc.html" class="navbar_inhoud"> Gaming PCs </a>
+      </div>
+
+      <div class="navbar">
+        <a href="AboutUs.html" class="navbar_inhoud"> About us </a>
+      </div>
+
+      <div class="navbar">
+        <a href="Checkout.html"> <img src="shopping_cart3.png" alt="cart" class="checkout"> </a>
+      </div>
+    </nav>
   </header>
+  <a href="pc.html" id="knopje"> Buy </a>
 
-   <a href="pc.html" id="knopje" > Buy </a>
-    
   <script>
-      window.onscroll = function() {myFunction()};
+    window.onscroll = function () {myFunction()};
 
-      var header = document.getElementById("myHeader");
-      var sticky = header.offsetTop;
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
 
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("scrolled");
-        }
-        else {
-          header.classList.remove("scrolled");
-        }
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("scrolled");
       }
-    </script>
-  </body>
+      else {
+        header.classList.remove("scrolled");
+      }
+    }
+  </script>
+</body>
 
 
-    
-  <h1 style="z-index: 1; margin: 0;">
-    <video autoplay loop muted id="background-video">
-      <source src="computer.mp4">
-    </video>
-  </h1>
+
+<h1 style="z-index: 1; margin: 0;">
+  <video autoplay loop muted id="background-video">
+    <source src="computer.mp4">
+  </video>
+</h1>
+
 </html>

@@ -6,9 +6,7 @@
 
 
 /* De root geeft ons de mogelijkheid om overal een variabele te plaatsen met de juiste waarde */
-/* Hierdoor kunnen wij gemakkelijk de juiste kleuren en maten vinden */
-/* Deze 2 roots zijn appart voor gemak, het veranderd de functie van de root niet */
-
+/* Hierdoor kunnen wij gemakkelijk de juiste kleuren vinden */
 :root
 
 /* color */
@@ -29,21 +27,9 @@
   --random: #eb43ff;
 }
 
-:root
-
-/* lengths */
-  {
-  --aspect-ratio-pictures-min: 80px;
-  --aspect-ratio-pictures-max: 120px;
-  --aspect-ratio-16_9: 56.25%;
-  --aspect-ratio-1_1: 100%;
-  --aspect-ratio-4_3: 75%;
-}
-
-
 /***** Dingen voor de kopjes *****/
 #kopje {
-  background-color: black;
+  background-color: #c22424; 
   font-size: xx-large;
   font-weight: bold;
   font-family: "priori-sans", sans-serif;
@@ -70,20 +56,15 @@
 /***** Dingen voor de kopjes *****/
 
 /***** Dingen voor de Navbars *****/
-#navbar1 {
-  font-family: "t-26 carbon", sans-serif;
-  color: var(--color-text-navbar);
-  text-decoration: none;
-  padding-left: 24px;
+.navbar {
+  padding-left: 30px;
   z-index: 51;
 }
 
-#navbar2 {
+.navbar_inhoud {
   font-family: "t-26 carbon", sans-serif;
   color: var(--color-text-navbar);
   text-decoration: none;
-  padding-left: 20px;
-  z-index: 51;
 }
 
 .checkout {
@@ -91,7 +72,6 @@
   float: right;
   height: 38px;
   width: 42px;
-  margin: 2em;
   color: white;
 }
 
@@ -100,10 +80,12 @@
   float: left;
   max-width: 275px;
   height: auto;
-  padding-right: 8px;
   z-index: 51;
 }
 
+.logoOffset{
+  padding-left: 8px;
+}
 
 
 /***** Dingen voor de Navbars *****/
@@ -141,10 +123,10 @@
 
 #knopje:hover {
   background-color: #4c4343;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   font-size: 40px;
 }
 
