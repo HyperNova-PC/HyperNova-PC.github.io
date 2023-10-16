@@ -18,6 +18,7 @@
   --color-border-header-test: #78fad1;
   --color-background-header-test: #0abf30;
   --color-text-navbar: #ffffff;
+  --color-text-navbar-hovered: #9588a5;
   --color-background-header: #0a101d;
   --color-border-header: #504e4e;
   --color-hovered-knopje: #4c4343;
@@ -59,21 +60,18 @@
 /***** Dingen voor de Navbars *****/
 .navbar {
   z-index: 51;
-  background: transparant;
-  border: transparant solid 3px;
-  border-radius: 50px;
-}
-
-.navbar:hover{
-  background: #6b6b6b;
+  background: transparent;
+  border-bottom: transparent solid 3px;
   
 }
+  
 
 .navbar_inhoud {
   font-family: "t-26 carbon", sans-serif;
   color: var(--color-text-navbar);
   text-decoration: none;
 }
+
 
 .checkout {
   text-decoration: none;
@@ -169,7 +167,6 @@
   padding-bottom: 4px;
   padding-left: 4px;
 
-  background-color: var(--black);
   font-size: xx-large;
   font-family: "priori-sans", sans-serif;
   color: white;
@@ -207,14 +204,6 @@
 
 /***** Dingen voor de Pc plaatjes *****/
 
-
-#Pc-header {
-  height: 632;
-  width: 2048;
-  background-color: var(--color-test-background);
-
-}
-
 .container-list {
   display: flex;
   justify-content: center;
@@ -247,36 +236,63 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  width: calc(15% + 50px);
+  width: calc(15% + 60px);
   height: 100%;
+  margin-top: 4%;
+}
 
-  background-color: var(--color-test-background);
+.container_pc-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
   
-  border: 3px solid var(--color-border-items);
-  transition: all 0.3s ease;
-}
-
-.item:hover {
-  background-color: var(--color-border-header-test);
-  border-bottom: 3px solid var(--color-background-header-test);
-}
-
-.Pc-pics {
-  height: 100%;
+  height: 12vw;
   width: 100%;
+  margin-top: 8%;
+  background: black;
+  
+}
+
+.pc-info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-header);
+  font-size: 1vw;
+  font-family: "priori-sans", sans-serif;
+  color: white;
+}
+
+.pc-name {
+  height: 0%;
+  width: 0%;
+  color: white;
+}
+
+.pc-name.container-pictures:hover {
+  color: aqua;
 }
 
 .container_pictures {
   height: 100%;
   width: 100%;
   padding: 1.6em;
+  border: 3px solid var(--color-border-items);
+  background-color: var(--color-test-background);
   transition: all 0.3s ease;
 }
 
 .container_pictures:hover {
-  padding: 0.8em
+  padding: 0.8em;
+  background-color: var(--color-border-header-test);
+  border-bottom: 3px solid var(--color-border-header-test);
 }
 
+.Pc-pics {
+  height: 100%;
+  width: 100%;
+}
 
 
 
