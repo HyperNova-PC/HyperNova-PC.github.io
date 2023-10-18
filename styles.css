@@ -248,7 +248,7 @@
 
 .container_pc-info {
   width: 100%;
-  background: black;
+  background: transparent;
 }
 
 .pc-info {
@@ -372,4 +372,15 @@
   margin: 3px;
   text-align: center;
   background-image: linear-gradient(#504e4e, transparent);
+}
+
+
+
+
+/***** De code voor de footer *****/
+
+footer {
+  height: 50vh;
+  width: 100%;
+  background-color: white;
 }
