@@ -22,6 +22,7 @@
   --color-background-header: #0a101d;
   --color-border-header: #504e4e;
   --color-hovered-knopje: #4c4343;
+  --color-pcInfo-text: #ffffff;
   --light: #ffffff;
   --error: #e24d4c;
   --warning: #e9bd0c;
@@ -210,6 +211,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   row-gap: 50px;
+  background-color: black;
+  background-image: url("Galaxy.jpg");
 }
 
 
@@ -219,6 +222,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  
 
   column-gap: 100px;
   row-gap: 50px;
@@ -239,6 +243,7 @@
   width: calc(15% + 60px);
   height: 100%;
   margin-top: 4%;
+  
 }
 
 .container_pc-info {
@@ -258,35 +263,49 @@
 .pc-info {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-background-header);
-  font-size: 1vw;
+  /* background-color: var(--color-background-header); */
   font-family: "priori-sans", sans-serif;
-  color: white;
+  transition: all 0.3s ease;
 }
 
 .pc-name {
-  height: 0%;
-  width: 0%;
-  color: white;
+  font-size: 30px;
+  color:  #ffffff;
+  font-weight: bold;
 }
 
-.pc-name.container-pictures:hover {
-  color: aqua;
+.pc-price {
+  font-size: 20px;
+  color: #a845b9;
+  font-weight: bold;
+  font-family: ;
+  
 }
+
+.buy_now {
+  font-size: 10px;
+  color: #404040;
+  font-weight: bold;
+}
+
+
 
 .container_pictures {
   height: 100%;
   width: 100%;
   padding: 1.6em;
   border: 3px solid var(--color-border-items);
-  background-color: var(--color-test-background);
+  background: radial-gradient(rgb(49 6 173 / 25%) 0%, rgb(79 49 169) 34%, #141418 80%);
   transition: all 0.3s ease;
 }
 
 .container_pictures:hover {
   padding: 0.8em;
-  background-color: var(--color-border-header-test);
-  border-bottom: 3px solid var(--color-border-header-test);
+  background: radial-gradient(rgb(49 6 173 / 25%) 0%, rgb(79 49 169) 34%, #141418 90%);
+  border-bottom: 3px solid white;
+}
+.container_pictures:hover + .container_pc-info .pc-info:first-child { /* stack overflow is handig */
+  color: #a845b9;
 }
 
 .Pc-pics {
@@ -327,6 +346,7 @@
 }
 
 /***** de opmaak voor de kopjes en de subteksten *****/
+/*** dit gaat over de grote tekest ***/ 
 .kopje {
   font-family: "priori-sans", sans-serif;
   font-size: 28px;
@@ -335,7 +355,7 @@
   color: white;
   margin-bottom: 10px;
 }
-
+/*** dit gaat over de stijl van de kleine text in de kolomen ***/
 .subtext {
   font-family: "priori-sans", sans-serif;
   font-size: 20px;
@@ -344,7 +364,7 @@
   margin-top: 0px;
 }
 
-
+/*** dit is de div waar de 3 andere kolomen in staan ***/
 #kolom1 {
   display: flex;
   justify-content: space-around;
@@ -352,7 +372,7 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+/*** deze code gaat over de kolomen waar de tekst in staat ***/
 #kolom {
   float: left;
   width: 20%;
