@@ -1,9 +1,17 @@
-/* weet niet waar dit moet*/
+/* weet niet waar dit moet en volgensmij wordt het nergens gebruikt, maar het blijft voor de zekerheid bestaan */
 #achtergrond {
   background-color: black;
   margin: 0px;
 }
 
+
+body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de body een blanke vlakte is */ 
+  /* Ik weet niet wat we moeten uitleggen, dus we leggen alles wel 1x uit per uniek dng */
+  margin: 0; /* Hiermee kan je de maten buiten de border en binnen de sectie bepalen */
+  padding: 0; /* Hiermee kan je de maten buiten het item en binnen de border bepalen */
+  border: 0; /* Hiermee kan je de maten buiten de padding en binnen de margin bepalen, daarnaast kan je de kleuren en vorm hiervan veranderen. Dit kan (als het klopt) ook met de margin en de padding */
+  background-color: black; /* De achtergrond kleur */
+}
 
 /* De root geeft ons de mogelijkheid om overal een variabele te plaatsen met de juiste waarde */
 /* Hierdoor kunnen wij gemakkelijk de juiste kleuren vinden */
@@ -11,7 +19,7 @@
 
 /* color */
   {
-  --color-border-container-list: #d719d7;
+  --color-border-container-list: #d719d7; /* Een voorbeeld van een variabele met informatie */
   --color-border-container-products: #fb7185;
   --color-border-items: #20242f;
   --color-test-background: #fb7185;
@@ -24,6 +32,7 @@
   --color-hovered-knopje: #4c4343;
   --color-pcInfo-text: #ffffff;
   --color-pcInfo-text-hovered: #ba5dfd;
+  --color-container_picture: #290b81;
   --light: #ffffff;
   --error: #e24d4c;
   --warning: #e9bd0c;
@@ -34,12 +43,12 @@
 /***** Dingen voor de kopjes *****/
 #kopje {
   background-color: #c22424; 
-  font-size: xx-large;
-  font-weight: bold;
-  font-family: "priori-sans", sans-serif;
-  color: white;
+  font-size: xx-large; /* De grootte van de text, dit kan ook met maten veranderd worden */
+  font-weight: bold; /* Hoe de text uitgedrukt is, in dit geval dikgedrukt */
+  font-family: "priori-sans", sans-serif; /* Wat voor soort font er gebruikt wordt */
+  color: white; /* De kleur van de text */
   margin: 0%;
-  padding-top: 4px;
+  padding-top: 4px; /* Apparte delen van de padding, deze kan je voor bepaalde specifieke delen aanpassen, dit kan ook met de margin en de border */
   padding-bottom: 4px;
   padding-left: 4px;
 }
@@ -61,8 +70,8 @@
 
 /***** Dingen voor de Navbars *****/
 .navbar {
-  z-index: 51;
-  background: transparent;
+  z-index: 51; /* De z-index zorgt ervoor dat bepaalde dingen eerder geklikt of gezien worden dan andere, ook voorkomt het overlap (als het juist gebruikt wordt). Een hoge waarde betekent dat het voorop je scherm zit, een lage waarde achterop je scherm (als dat logisch klinkt) */
+  background: transparent; /* Net als de background-color, maar dan kan je er meerdere dingen mee doen (zoals plaatjes of gradients) */
   border-bottom: transparent solid 3px;
   
 }
@@ -72,15 +81,15 @@
   font-family: "t-26 carbon", sans-serif;
   font-weight: bold;
   color: var(--color-text-navbar);
-  text-decoration: none;
+  text-decoration: none; /* Dit geeft de links hun streepjes en kan text wat decoraties geven (denk ik), we gebruiken het alleen voor de links */
 }
 
 
 .checkout {
   text-decoration: none;
-  float: right;
-  height: 38px;
-  width: 42px;
+  float: right; /* Dit laate een sectie naar een bepaalde kant toe hangen, in dit geval naar rechts */
+  height: 38px; /* Hoe hoog een sectie is */
+  width: 42px; /* Hoe breed een sectie is */
   color: white;
 }
 
@@ -103,10 +112,10 @@
 #knop {
   font-size: xx-large;
   color: white;
-  position: absolute;
-  top: 50%;
+  position: absolute; /* Hoe en waar een sectie op de pagina staat, absolute betekent dat hij altijd op dezelfde plek blijft staan, ongeacht veranderingen aan andere secties */
+  top: 50%; /* Een beetje hetzelfde als padding, margin en border, maar dan is dit meer voor de locatie op een pagina */
   left: 50%;
-  transform: (-50%, -50%);
+  transform: (-50%, -50%); /* Zorgt voor de coördinaten?  */
 }
 
 #knopje {
@@ -116,7 +125,7 @@
   padding-bottom: 10px;
   background-color: transparent;
   border: 1px solid white;
-  border-radius: 50px;
+  border-radius: 50px; /* Zorgt ervoor dat de border rond afloopt */
   position: absolute;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -127,11 +136,11 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Zorgt voor een smooth overgang van waardes (bijvoorbeeld kleuren) */
 }
 
-#knopje:hover {
-  background-color: var(--color-hovered-knopje);
+#knopje:hover { /* Hover veranderdt de huidige waardes wanneer je over een sectie hovered met de gegeven id */
+  background-color: var(--color-hovered-knopje); /* Dit is de notatie van de variabelen van de root */
   padding-left: 26px;
   padding-right: 26px;
   padding-top: 13px;
@@ -153,16 +162,17 @@
 /***** Dingen voor de header *****/
 
 .poster {
-  background-color: black;
-  height: 500px;
+  background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture)); /* Een gradient is een overgang van kleuren, in dit geval is het een overgang van links naar rechts */
+  padding-top: 12vh;
   z-index: 1;
 }
 
 .page-header {
-  display: flex;
-  justify-content: flex-start;
-  column-gap: 30px;
-  align-items: center;
+  display: flex; /* Display is hoe de sectie (in dit geval div) weergegeven wordt. Flex is hierbij een redelijk nieuwe functie die er voor zorgt dat je gemakkelijk dingen kan ordenen. Dit gebruik ik veel want het is handig en makkelijk te gebruiken */
+  flex-direction: row; /* De directie van de content in de flex box, row gaat van links naar rechts en column van rechts naar links. Je hebt ook inverted varianten hiervan */
+  justify-content: flex-start; /* De manier waarop de content geordend is. In dit geval gaat het om de horizontale as. flex-start zorgt ervoor dat de content links begint */
+  column-gap: 30px; /* De ruimte tussen verschilende items in de flex box, in dit geval is het de ruimte tussen de text links en de text rechts */
+  align-items: center; /* de manier waarop de content geordend is (net als de justify-content. In dit geval gaat het om de verticale as). Center zorgt ervoor dat alles in het midden zit */
   height: 100px;
   width: 100%;
   margin: 0%;
@@ -177,8 +187,6 @@
 
 /* zorgt voor de vorm van de header */
 
-
-
 .header {
   position: fixed; /* hiedoor blijft de header op dezelfde plek */
   left: 0;
@@ -187,33 +195,30 @@
   z-index: 50;
   transition: all 0.3s ease; 
   /*zorgt ervoor dat er een vloeiende smooth beweging is naar de nieuwe kleuren */
-  background: rgb(0, 0, 0, 0.0);
-  border-bottom: 2px solid rgb(0, 0, 0, 0.0);
+  background: transparent; /* De background is het zelfde als de kleur erachter */
+  border-bottom: 2px solid rgb(0, 0, 0, 0.0); /* 2px geeft de dikte van de border aan, solid zorgt ervoor dat de border zichtbaar is en rgba zorgt voor de kleur en de opacity. De opacity zorgt voor de doorzichtbaarheid van de kleur */
 }
 
 /* zorgt voor de locatie van de header en voor een smooth transition wanneer je scrolled */
-
-
 .header.scrolled {
   background: var(--color-background-header);
   border-bottom: 2px solid var(--color-border-header);
 }
-
 /* wanneer je scrolled worden de waardes van de background en border-bottom aangepast zodat het smooth is */
 /* Scrolled is hierbij de nieuwe class die hier ook gemaakt wordt. Het kan ook appart staan maar dit is handiger */
-
 
 /***** Dingen voor de header *****/
 
 /***** Dingen voor de Pc plaatjes *****/
-
 .container-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  row-gap: 50px;
+  row-gap: 50px; /* het zelde als column-gap, maar dan tussen de items van boven naar beneden */
   background-color: black;
+  padding-bottom: 6%;
+  background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture));
 }
 
 
@@ -224,14 +229,12 @@
   flex-wrap: wrap;
   align-items: center;
   
-
   column-gap: 100px;
   row-gap: 50px;
   min-width: 24vw;
   min-height: 24vw;
   height: 100%;
   width: 100%;
-  
 }
 
 .item {
@@ -243,7 +246,6 @@
   width: calc(15% + 60px);
   height: 100%;
   margin-top: 4%;
-  
 }
 
 .container_pc-info {
@@ -285,13 +287,13 @@
   padding: 1.6em;
   margin-bottom: 10%;
   border: 2px solid var(--color-border-items);
-  background: radial-gradient(rgb(49 6 173 / 25%) 0%, rgb(79 49 169) 34%, #1f1629 80%);
+  background: radial-gradient(rgb(49 6 173 / 25%) 0%, var(--color-container_picture) 34%, #301655 80%);
   transition: all 0.3s ease;
 }
 
 .container_pictures:hover {
   padding: 0.8em;
-  background: radial-gradient(rgb(49 6 173 / 25%) 0%, rgb(79 49 169) 34%, #1f1629 90%);
+  background: radial-gradient(rgb(49 6 173 / 25%) 0%, var(--color-container_picture) 34%, #301655 90%);
   border-bottom: 2px solid var(--color-pcInfo-text-hovered);
 }
 
@@ -303,15 +305,11 @@
   height: 100%;
   width: 100%;
 }
-
-
-
 /***** Dingen voor de Pc plaatjes *****/
-
 
 /***** Dingen voor de about us ******/
 #aboutusbody {
-  background-color: black;
+ background-image: linear-gradient(90deg, #494949 0%, black 50%, #494949 100%);
  
 }
 /*** ik kan maar niet die gradient net wat korter krijgen dus idk laat het maar zo staan***/
@@ -321,9 +319,6 @@
 }
 #imagepc {
   display: block;
-  margin-left:auto;
-  margin-right:auto;
-  width: 50%;
   margin-top: 100px;
 }
 
@@ -362,6 +357,7 @@
   gap: 1.0em;
   flex-direction: row;
   flex-wrap: wrap;
+  background-image:linear-gradient(90deg, #3d3d3d 0%, black 50% #3d3d3d 100%, transparent)  ;
 }
 /*** deze code gaat over de kolomen waar de tekst in staat ***/
 #kolom {
@@ -374,13 +370,106 @@
   background-image: linear-gradient(#504e4e, transparent);
 }
 
-
-
-
 /***** De code voor de footer *****/
 
 footer {
-  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  
+  height: 30vh;
   width: 100%;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
+
+.container_footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+  border-bottom: 3px solid #ba5dfd;
+  height: 80%;
+  margin-left: 9%;
+  padding-right: 269px;
+}
+
+.items_footer {
+  margin-right: 45%;
+}
+
+
+.footer-logo {
+  color: white;
+  width: 275px;
+  margin-top: calc(15vh - 42px);
+  margin-left: 6%;
+}
+
+.footer-titles {
+  margin: 0;
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "priori-sans", sans-serif;
+  color: var(--color-pcInfo-text-hovered);
+}
+
+.footer-contents {
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.footer-contents-text {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "priori-sans", sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-contents-text:hover {
+  color: var(--color-pcInfo-text-hovered);
+}
+/***** De code voor de footer *****/
+
+/***** Code voor de Checkout *****/
+
+.container_checkout {
+  background: white;
+}
+
+.checkout-titel {
+  color: var(--color-pcInfo-text-hovered);
+  margin-top: calc(13vh - 12px);
+  padding-left: 1vw;
+  padding-top: 1vh;
+}
+
+.container_checkout-info {
+  padding-bottom: 1vh;
+  padding-left: 1vw;
+}
+
+.checkout-info-titel {
+  color: black;
+  font-size: 20px;
+  font-family: "priori-sans", sans-serif;
+  font-weight: bold;
+}
+
+.checkout-info-content {
+  color: black;
+  font-size: 15px;
+  font-family: "priori-sans", sans-serif;
+}
+/***** Code voor de Checkout *****/
+
+
+
+
