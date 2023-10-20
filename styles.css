@@ -4,7 +4,6 @@
   margin: 0px;
 }
 
-
 body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de body een blanke vlakte is */ 
   /* Ik weet niet wat we moeten uitleggen, dus we leggen alles wel 1x uit per uniek dng */
   margin: 0; /* Hiermee kan je de maten buiten de border en binnen de sectie bepalen */
@@ -21,7 +20,7 @@ body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de bo
   {
   --color-border-container-list: #d719d7; /* Een voorbeeld van een variabele met informatie */
   --color-border-container-products: #fb7185;
-  --color-border-items: #20242f;
+  --color-border-items: #5933b9;
   --color-test-background: #fb7185;
   --color-border-header-test: #78fad1;
   --color-background-header-test: #0abf30;
@@ -162,9 +161,9 @@ body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de bo
 /***** Dingen voor de header *****/
 
 .poster {
-  background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture)); /* Een gradient is een overgang van kleuren, in dit geval is het een overgang van links naar rechts */
-  padding-top: 12vh;
-  z-index: 1;
+  display: flex; /* Dit zorgt ervoor dat er geen zwarte rand te zien is */
+  border-bottom: 3px solid var(--color-border-items);
+  border-top: 3px solid var(--color-border-items);
 }
 
 .page-header {
@@ -196,13 +195,13 @@ body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de bo
   transition: all 0.3s ease; 
   /*zorgt ervoor dat er een vloeiende smooth beweging is naar de nieuwe kleuren */
   background: transparent; /* De background is het zelfde als de kleur erachter */
-  border-bottom: 2px solid rgb(0, 0, 0, 0.0); /* 2px geeft de dikte van de border aan, solid zorgt ervoor dat de border zichtbaar is en rgba zorgt voor de kleur en de opacity. De opacity zorgt voor de doorzichtbaarheid van de kleur */
+  border-bottom: 3px solid rgb(0, 0, 0, 0.0); /* 2px geeft de dikte van de border aan, solid zorgt ervoor dat de border zichtbaar is en rgba zorgt voor de kleur en de opacity. De opacity zorgt voor de doorzichtbaarheid van de kleur */
 }
 
 /* zorgt voor de locatie van de header en voor een smooth transition wanneer je scrolled */
 .header.scrolled {
   background: var(--color-background-header);
-  border-bottom: 2px solid var(--color-border-header);
+  border-bottom: 3px solid var(--color-border-header);
 }
 /* wanneer je scrolled worden de waardes van de background en border-bottom aangepast zodat het smooth is */
 /* Scrolled is hierbij de nieuwe class die hier ook gemaakt wordt. Het kan ook appart staan maar dit is handiger */
@@ -216,9 +215,9 @@ body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de bo
   flex-wrap: wrap;
   flex-direction: row;
   row-gap: 50px; /* het zelde als column-gap, maar dan tussen de items van boven naar beneden */
-  background-color: black;
   padding-bottom: 6%;
   background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture));
+  border-bottom: 3px solid var(--color-border-items);
 }
 
 
@@ -372,7 +371,7 @@ body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de bo
 
 /***** De code voor de footer *****/
 
-footer {
+footer { /* Universele code voor de footer */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -438,23 +437,20 @@ footer {
 }
 /***** De code voor de footer *****/
 
-/***** Code voor de Checkout *****/
-
+/***** Code voor de Checkout site *****/
 .container_checkout {
   background: white;
+  padding-left: 1vw;
+  padding-bottom: 1vh;
+  padding-right: 1vw;
 }
 
 .checkout-titel {
   color: var(--color-pcInfo-text-hovered);
   margin-top: calc(13vh - 12px);
-  padding-left: 1vw;
   padding-top: 1vh;
 }
 
-.container_checkout-info {
-  padding-bottom: 1vh;
-  padding-left: 1vw;
-}
 
 .checkout-info-titel {
   color: black;
@@ -468,8 +464,36 @@ footer {
   font-size: 15px;
   font-family: "priori-sans", sans-serif;
 }
-/***** Code voor de Checkout *****/
+/***** Code voor de Checkout site *****/
+
+/***** Code voor de product-pages *****/
+.Product-page__container_poster {
+  width: auto;
+  height: auto;
+  background-image: url("");
+}
+
+.Product-page__poster-pic {
+  width: 100%;
+  height: 100%;
+  border-top: 3px solid var(--color-border-items);
+  border-bottom: 3px solid var(--color-border-items);
+}
+
+.Product-page__poster-container_text {
+  width: 40%;
+  height: auto;
+}
+
+.Product-page__poster-text {
+  font-weight: bold;
+  font-family: "priori-sans", sans-serif;
+  font-size: medium;
+  color: white;
+}
 
 
 
 
+
+/***** Code voor de product-pages *****/
