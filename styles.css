@@ -37,7 +37,8 @@ body { /* De universele waardes voor de body. Dit zorgt er alleen voor dat de bo
   --warning: #e9bd0c;
   --info: #3498db;
   --random: #eb43ff;
-}
+  --test: #000000;
+  }
 
 /***** Dingen voor de kopjes *****/
 #kopje {
@@ -467,17 +468,22 @@ footer { /* Universele code voor de footer */
 /***** Code voor de Checkout site *****/
 
 /***** Code voor de product-pages *****/
-.Product-page__container_poster {
-  width: auto;
-  height: auto;
-  background-image: url("");
+
+.Product-page__poster-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+  border-top: 3px solid var(--color-border-items);
+  border-bottom: 3px solid var(--color-border-items);
 }
 
 .Product-page__poster-pic {
-  width: 100%;
-  height: 100%;
-  border-top: 3px solid var(--color-border-items);
-  border-bottom: 3px solid var(--color-border-items);
+  width: 60%;
+  height: auto;
 }
 
 .Product-page__poster-container_text {
