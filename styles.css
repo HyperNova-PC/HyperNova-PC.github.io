@@ -41,6 +41,7 @@ body {
   --color-pictures-border-clicked: #3a99eb;
   --color-border-product-page__poster: #aba9b1;
   --color-border-product-page__poster-clicked: #5972a3;
+  --color-text-intro: #977be9;
 
   /* Deze zijn gekopieerd van andere sites om mee te testen, --test is wel zelf gemaakt */
   --light: #ffffff;
@@ -628,47 +629,94 @@ footer {
   width: 12vw;
 }
 
-
 .Product-page__poster-icon-pics {
   /* zorgt ervoor dat de plaatjes hun maximale grootte hebben in de boxes van de plaatjes */
   height: 100%;
   width: 100%;
 }
 
-.Product-page__poster-container-text {
+.Product-page__poster-container-text { /* zorgt ervoor dat de text op zijn plaat zit en zorgt voor de kleur van de achtergrond en de border */
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
 
-  margin-right: 4vw;
-  background-color: white;
+  margin-right: 8vw;
+  background-color: rgb(80 80 83 / 95%);
   border: 3px solid black;
-  height: 50vh;
-  width: 31vw;
+  border-radius: 10px;
+  /* het zijn pixel waarde want met text werken andere waarde enorm slecht */
+  height: 570px; 
+  width: 380px;
 }
 
-#Product-page__poster-text-format {
-  margin-left: 2vw;
-  color: black;
+.Product-page__poster-title { /* zorgt voor de vorm, locatie en kleur van de titel */
+  margin: 0;
+  margin-left: 13px;
+  margin-top: 15px;
+
+  font-size: 54px;
+  font-weight: bold;
+  color: white;
   font-family: "priori-sans", sans-serif;
 }
 
-.Product-page__poster-title {
-  font-size: calc(3vh - 6px);
+.Product-page__poster-intro { /* zorgt voor de vorm, locatie en kleur van de prijs */
+  margin: 0;
+  margin-left: 13px;
+  margin-top: 6px;
+
+  color: var(--color-text-intro);
+  font-size: 32px;
+  font-weight: 100;
+  font-family: "t26-carbon", sans-serif;
+}
+
+.Product-page__poster-content { /* zorgt voor de vorm, locatie en kleur van de text */
+  margin: 0;
+  margin-left: 13px;
+  margin-top: 20px;
+
+  font-size: 20px;
   font-weight: bold;
+  color: white;
+  font-family: "t26-carbon", sans-serif;
 }
 
-.Product-page__poster-intro {
+.Product-page__poster-container-buy_now { /* Dit is de container waarin buy-now staat, de container is zelf een link en dit is de opbouw van de hele container */
+  margin: 0;
+  margin-left: 72px;
+  margin-top: 72px;
+  background: var(--color-border-product-page__poster);
+  border: 3px solid black;
+  border-radius: 10px;
 
-  font-size: calc(3vh - 6px);
-  font-weight: ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 220px;
+  height: 70px;
+  transition: all 0.3s ease;
+  text-decoration: none; /* blijkbaar hebben boxes ook decoration */
 }
 
-.Product-page__poster-content {
-  font-size: calc(2vh - 6px);
-  font-weight: ;
+.Product-page__poster-container-buy_now:hover { /* zorgt ervoor dat de achtergrond kleur veranderd wanneer je hovered */
+  background: var(--color-text-intro);
 }
 
+.Product-page__poster-buy_now { /* zorgt voor de vorm en opmaak van de buy it now text */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "priori-sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.Product-page__poster-container-buy_now:hover .Product-page__poster-buy_now {
+  /* net als bij de gaming pc site veranderd de text, hier gaat het alleen om de kleur. Waarom het zonder + is weet ik niet precies, ik verwijderde namelijk de + en toen werkte hij opeens. Denk dat het iets de maken heeft met waardes in de container bij de gaming pc text. oh well */
+  font-size: 22px;
+}
 /***** Code voor de product-pages *****/
