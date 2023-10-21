@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Een snelle tip voor de product-pages, verander niet te vaak van plaatjes, je krijgt er zowaar bijna epelepsie van. En als je het doet, wacht dan een seconde zodat het plaatje kan laden, anders ziet het er redelijk scuffed uit -->
 
 <head>
-  <title> Blue Dwarf </title>
+  <title> HyperNova - Blue Dwarf </title>
   <!-- Deze sites gaan gecopy paste worden en alle text en plaatjes worden anders, dat is alles -->
   <link rel="icon" type="image/x-icon" href="/galaxy.png">
   <link rel="stylesheet" href="/styles.css">
   <!-- Omdat deze file in een folder zit moet er een slash staan zodat er goed verwezen kan worden naar de styles.css. Stel dat ik een plaatje uit een andere folder nodig heb (in dit geval Pc pics), dan moet ik /Pc pics/plaatje i.p.v. Pc pics/plaatje. Voor de rest werkt alles hetzelfde, snapte dit eerst niet maar het is wel logisch -->
 </head>
 
-<body>
+<body style="background-color: var(--color-border-product-page__poster)">
   <header id="myHeader" class="header">
     <nav class="page-header">
       <div class="logoOffset">
@@ -53,18 +54,95 @@
     <!-- Zorgt voor een lege ruimte, net als bij de pc.html -->
   </section>
 
+  <section id="poster" class="Product-page__poster-container"
+    style="background-image: url('/Pc sites/poster pics_jpg/Blue Dwarf poster1.jpg');">
+    <div class="Product-page__poster-container-icons">
+      <div id="box1" class="Product-page__poster-icons">
 
-  <section class="Product-page__poster-container">
-    <div class="Product-page__poster-container_text">
-      <div class="Product-page__poster-text">
-        Test 1 2 3
+        <img src="poster pics_jpg/Blue Dwarf poster1.jpg" alt="Blue Dwarf poster1" class="Product-page__poster-icon-pics">
+      </div>
+
+      <div id="box2" class="Product-page__poster-icons">
+
+        <img src="poster pics_jpg/Blue Dwarf poster2.jpg" alt="Blue Dwarf poster1" class="Product-page__poster-icon-pics">
+      </div>
+      <div id="box3" class="Product-page__poster-icons">
+
+        <img src="poster pics_jpg/Blue Dwarf poster3.jpg" alt="Blue Dwarf poster1" class="Product-page__poster-icon-pics">
       </div>
     </div>
-    
-    
-    <img src="poster pics_jpg/Blue Dwarf poster.jpg" alt="Blue Dwarf poster" class="Product-page__poster-pic">
 
+
+    <div class="">
+      <div class="">
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    
   </section>
+  <!---- Script voor de icoontjes en de background-images ----->
+
+  <script> /* Script voor de background-images */
+    var i = 0; /* De waarde van de index voor de list */
+    var image = [ /* De list met elke url zodat het plaatje kan veranderen */
+      "url('/Pc sites/poster pics_jpg/Blue Dwarf poster1.jpg')", /* Elke site krijgt zijn */
+      "url('/Pc sites/poster pics_jpg/Blue Dwarf poster2.jpg')", /* eigen plaatjes */
+      "url('/Pc sites/poster pics_jpg/Blue Dwarf poster3.jpg')"]; /* het zijn er telkens 3 */
+
+    var box_1 = document.getElementById("box1"); /* Een variabele voor elke id */
+    var box_2 = document.getElementById("box2"); /* Dit is puur voor de gemakszucht */
+    var box_3 = document.getElementById("box3");
+
+    /* Een eventlistener is (voor zo ver ik weet, kan compleet fout zijn) een functie die met meerdere events (dingen van de gebruiker) een andere functie kunnen activeren */
+    box_1.addEventListener('click', function () { /* Hier wordt zowel een functie geactiveerd als gedefineerd in 1 zin, best handig. Het doel van de functie is om "i" naar de juist waarde te veranderen zodat deze de juiste index heeft voor het juiste plaatje */
+      i = 0; /* computers tellen vanaf 0, dus dit is dan de index van plaatje1 */
+      document.getElementById("poster").style.backgroundImage = image[i]; /* in de style van poster veranderd hij de waarde van de backgroundImage, dit gebeurt alleen als het plaatje er nog niet staat */
+      border() /* een functie die hier verder onderaan staat */
+    });
+
+    box_2.addEventListener('click', function () {
+      i = 1;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    box_3.addEventListener('click', function () {
+      i = 2;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    function border() { /* zelf gemaakte functie die veels te lang duurde, het enige wat ik niet zelf wist was de .style.borderColor, en het duurde enorm lang om daar achter te komen */
+      if (i == 0) { /* Als i gelijk is aan de benodigde waarde, dan krijgt de border de "clicked" kleur */
+        box_1.style.borderColor = "var(--color-border-product-page__poster-clicked)";
+      }
+      if (i != 0) { /* Als i neit gelijk is aan de benodigde waarde, dan krijgt de border de standaard kleur */
+        box_1.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+      if (i == 1) {
+        box_2.style.borderColor = "var(--color-border-product-page__poster-clicked)";
+      }
+      if (i != 1) {
+        box_2.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+      if (i == 2) {
+        box_3.style.borderColor = "var(--color-border-product-page__poster-clicked)";
+      }
+      if (i != 2) {
+        box_3.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+    }
+  </script>
+
+  <!---- Script voor de icoontjes en de background-images ----->
 </body>
 
 <footer>
