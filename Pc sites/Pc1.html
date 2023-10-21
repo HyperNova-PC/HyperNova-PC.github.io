@@ -58,25 +58,33 @@
     style="background-image: url('/Pc sites/poster pics_jpg/Blue Dwarf poster1.jpg');">
     <div class="Product-page__poster-container-icons">
       <div id="box1" class="Product-page__poster-icons">
-
-        <img src="poster pics_jpg/Blue Dwarf poster1.jpg" alt="Blue Dwarf poster1" class="Product-page__poster-icon-pics">
+        <img src="poster pics_jpg/Blue Dwarf poster1.jpg" alt="Blue Dwarf poster1"
+          class="Product-page__poster-icon-pics">
       </div>
 
       <div id="box2" class="Product-page__poster-icons">
 
-        <img src="poster pics_jpg/Blue Dwarf poster2.jpg" alt="Blue Dwarf poster1" class="Product-page__poster-icon-pics">
+        <img src="poster pics_jpg/Blue Dwarf poster2.jpg" alt="Blue Dwarf poster1"
+          class="Product-page__poster-icon-pics">
       </div>
       <div id="box3" class="Product-page__poster-icons">
 
-        <img src="poster pics_jpg/Blue Dwarf poster3.jpg" alt="Blue Dwarf poster1" class="Product-page__poster-icon-pics">
+        <img src="poster pics_jpg/Blue Dwarf poster3.jpg" alt="Blue Dwarf poster1"
+          class="Product-page__poster-icon-pics">
       </div>
     </div>
 
 
-    <div class="">
-      <div class="">
-        
-      </div>
+    <div class="Product-page__poster-container-text">
+      <h1 id="Product-page__poster-text-format" class="Product-page__poster-title">
+        Blue Dwarf
+      </h1>
+      <h2 id="Product-page__poster-text-format" class="Product-page__poster-intro">
+
+      </h2>
+      <p id="Product-page__poster-text-format" class="Product-page__poster-content">
+
+      </p>
     </div>
 
 
@@ -86,7 +94,7 @@
 
 
 
-    
+
   </section>
   <!---- Script voor de icoontjes en de background-images ----->
 
@@ -103,8 +111,12 @@
 
     /* Een eventlistener is (voor zo ver ik weet, kan compleet fout zijn) een functie die met meerdere events (dingen van de gebruiker) een andere functie kunnen activeren */
     box_1.addEventListener('click', function () { /* Hier wordt zowel een functie geactiveerd als gedefineerd in 1 zin, best handig. Het doel van de functie is om "i" naar de juist waarde te veranderen zodat deze de juiste index heeft voor het juiste plaatje */
+
       i = 0; /* computers tellen vanaf 0, dus dit is dan de index van plaatje1 */
-      document.getElementById("poster").style.backgroundImage = image[i]; /* in de style van poster veranderd hij de waarde van de backgroundImage, dit gebeurt alleen als het plaatje er nog niet staat */
+      document.getElementById("poster").style.backgroundImage = image[i]; /* in de style van poster 
+      
+      veranderd hij de waarde van de backgroundImage, dit gebeurt alleen als het plaatje er nog niet staat. Ook wordt de poster id gebruikt voor de "getElementById" functie, dit kan volgensmij ook met classes maar ik weet beter hoe deze werkt dus gebruik ik deze */
+      
       border() /* een functie die hier verder onderaan staat */
     });
 
@@ -121,10 +133,12 @@
     });
 
     function border() { /* zelf gemaakte functie die veels te lang duurde, het enige wat ik niet zelf wist was de .style.borderColor, en het duurde enorm lang om daar achter te komen */
+      /* Alle functies zijn trouwens zelf gemaakt want geen van de tutorials legde precies uit wat ik nodig had, moest het dus zelf bij elkaar gaan puzzelen. Volgensmij is dat de letterlijke vertaling van programmeren */
+      
       if (i == 0) { /* Als i gelijk is aan de benodigde waarde, dan krijgt de border de "clicked" kleur */
         box_1.style.borderColor = "var(--color-border-product-page__poster-clicked)";
       }
-      if (i != 0) { /* Als i neit gelijk is aan de benodigde waarde, dan krijgt de border de standaard kleur */
+      if (i != 0) { /* Als i niet gelijk is aan de benodigde waarde, dan krijgt de border de standaard kleur */
         box_1.style.borderColor = "var(--color-border-product-page__poster)";
       }
       if (i == 1) {
