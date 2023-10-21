@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- uitleg staat in Pc1.html -->
 
 <head>
-  <title> Lunarian </title> <!-- Deze sites gaan gecopy paste worden en alle text en plaatjes worden anders, dat is alles -->
+  <title> HyperNova - Lunarian </title>
   <link rel="icon" type="image/x-icon" href="/galaxy.png">
-  <link rel="stylesheet" href="/styles.css"> <!-- Omdat deze file in een folder zit moet er een slash staan zodat er goed verwezen kan worden naar de styles.css. Stel dat ik een plaatje uit een andere folder nodig heb (in dit geval Pc pics), dan moet ik /Pc pics/plaatje i.p.v. Pc pics/plaatje. Voor de rest werkt alles hetzelfde, snapte dit eerst niet maar het is wel logisch -->
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
-<body>
+<body style="background-color: var(--color-border-product-page__poster)">
   <header id="myHeader" class="header">
     <nav class="page-header">
       <div class="logoOffset">
@@ -46,12 +47,114 @@
 </body>
 
 <body>
+  <section style="height: calc(12vh - 6px); background: linear-gradient(to right, #ff7600, #fbbd70, #ff7600);">
+  </section>
 
- <h1 style="color: black;">
-   test
- </h1>
+  <section id="poster" class="Product-page__poster-container"
+    style="background-image: url('/Pc sites/poster pics_jpg/Lunarian poster1.jpg'); height: 57vw; border-top: 3px solid #f73d3d; border-bottom: 3px solid #f73d3d;">
+    <div class="Product-page__poster-container-icons">
+      <div id="box1" class="Product-page__poster-icons"
+        style="border-color: var(--color-border-product-page__poster-clicked-lunarian);">
+        <img src="poster pics_jpg/Lunarian poster1.jpg" alt="Lunarian poster1.jpg"
+          class="Product-page__poster-icon-pics">
+      </div>
+
+      <div id="box2" class="Product-page__poster-icons">
+
+        <img src="poster pics_jpg/Lunarian poster2.jpg" alt="Lunarian poster2.jpg"
+          class="Product-page__poster-icon-pics">
+      </div>
+      <div id="box3" class="Product-page__poster-icons">
+
+        <img src="poster pics_jpg/Lunarian poster3.jpg" alt="Lunarian poster3.jpg"
+          class="Product-page__poster-icon-pics">
+      </div>
+    </div>
 
 
+    <div class="Product-page__poster-container-text">
+      <h1 class="Product-page__poster-title">
+        Lunarian
+      </h1>
+      <h2 class="Product-page__poster-intro" style="color: #f3954f;">
+        €3499,-
+      </h2>
+
+      <p class="Product-page__poster-content">
+        Lunarians we know all too well, always stealing anything they can find. But in an act of kindness they actually
+        gave us a special pc. And with the pc comes the Premium Edition of Starfield
+        <br />
+        <br />
+      </p>
+
+      <p class="Product-page__poster-content" style="margin-top: 5px;">
+        It features a "GeForce RTX 4000 Ti" with a cooling system and an "Intel Core i5-11400"
+      </p>
+
+      <a href="/Checkout.html" class="Product-page__poster-container-buy_now">
+        <style>
+          .Product-page__poster-container-buy_now:hover {
+            background-color: var(--color-border-product-page__poster-clicked-lunarian);
+          }
+        </style>
+        <p class="Product-page__poster-buy_now"> Buy It Now </p>
+      </a>
+    </div>
+  </section>
+  <!---- Script voor de icoontjes en de background-images ----->
+
+  <script>
+    var i = 0;
+    var image = [
+      "url('/Pc sites/poster pics_jpg/Lunarian poster1.jpg')",
+      "url('/Pc sites/poster pics_jpg/Lunarian poster2.jpg')",
+      "url('/Pc sites/poster pics_jpg/Lunarian poster3.jpg')"];
+
+    var box_1 = document.getElementById("box1");
+    var box_2 = document.getElementById("box2");
+    var box_3 = document.getElementById("box3");
+
+    box_1.addEventListener('click', function () {
+      i = 0;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    box_2.addEventListener('click', function () {
+      i = 1;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    box_3.addEventListener('click', function () {
+      i = 2;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    function border() {
+      if (i == 0) {
+        box_1.style.borderColor = "var(--color-border-product-page__poster-clicked-lunarian)";
+      }
+      if (i != 0) {
+        box_1.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+      if (i == 1) {
+        box_2.style.borderColor = "var(--color-border-product-page__poster-clicked-lunarian)";
+      }
+      if (i != 1) {
+        box_2.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+      if (i == 2) {
+        box_3.style.borderColor = "var(--color-border-product-page__poster-clicked-lunarian)";
+      }
+      if (i != 2) {
+        box_3.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+    }
+  </script>
+
+  <!---- Script voor de icoontjes en de background-images ----->
 </body>
 
 <footer>
@@ -97,9 +200,9 @@
       </div>
 
       <div class="footer-contents">
-        <h2 class="footer-contents-text">
+        <a href="/Pc sites/poster pics_jpg/domme_site.html" class="footer-contents-text">
           FAQs
-        </h2>
+        </a>
       </div>
     </div>
 

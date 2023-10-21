@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Zet de taal naar Engels, niet echt belangrijk -->
+<html lang="en">
+<!-- Zet de taal naar Engels, niet echt belangrijk -->
 <!----  Titel en plaatje  ----->
 
 <head>
@@ -10,11 +11,15 @@
 <!----  Titel en plaatje  ----->
 
 <!----  Site naam en Navbar ----->
-<body> <!-- De body is het hele gedeelte onder de header (die er hier in zit, let daar niet op) en boven de footer, hier staan de pc's in of andere dingen by de andere sites -->
-  <header id="myHeader" class="header"> <!-- De myHeader dient hier niet om iets te veranderen in de styles.css maar om een extra class toe te voegen aan de header. Dit kan ook met een normale class maar dit is overzichterlijker -->
-    <nav class="page-header"> <!-- Een nav is hetzelfde als een div, maar maakt het overzichterlijker -->
+
+<body>
+  <!-- De body is het hele gedeelte onder de header (die er hier in zit, let daar niet op) en boven de footer, hier staan de pc's in of andere dingen by de andere sites -->
+  <header id="myHeader" class="header">
+    <!-- De myHeader dient hier niet om iets te veranderen in de styles.css maar om een extra class toe te voegen aan de header. Dit kan ook met een normale class maar dit is overzichterlijker -->
+    <nav class="page-header">
+      <!-- Een nav is hetzelfde als een div, maar maakt het overzichterlijker -->
       <div class="logoOffset">
-        <a href=index.html> <img src="HyperNova.png" alt="logo" id="logo"> </a> 
+        <a href=index.html> <img src="HyperNova.png" alt="logo" id="logo"> </a>
       </div>
 
       <div class="navbar">
@@ -50,19 +55,21 @@
     }
   </script>
   <!---- Script voor scrollen ----->
-  
+
 </body>
-  
+
 <!---- Site naam en Navbar ----->
 
 <!---- Pc's rij 1 ----->
 
 <body>
-  <section style="height: calc(12vh - 6px); background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture));">
+  <section
+    style="height: calc(12vh - 6px); background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture));">
     <!-- Leege ruimte tussen de poster en de header -->
   </section>
-  
-  <section class="poster"> <!-- Deze section zorgt ervoor dat ik gemakkelijk een banner kon plaatsen, het kon ook een div zijn, maar die zorgt voor variatie en het maakt dingen duidelijker -->
+
+  <section class="poster">
+    <!-- Deze section zorgt ervoor dat ik gemakkelijk een banner kon plaatsen, het kon ook een div zijn, maar die zorgt voor variatie en het maakt dingen duidelijker -->
     <img src="Pc-header2.jpg" class="Pc-pics">
   </section>
 
@@ -97,7 +104,7 @@
           </a>
         </div>
       </div>
-      
+
       <div class="item">
         <a href="Pc sites/Pc2.html" class="container_pictures">
           <img src="Pc pics/Purple1.png" class="Pc-pics">
@@ -267,24 +274,28 @@
 <!---- Pc's rij 1 ----->
 
 <!---- footer ----->
-<footer> <!-- De footer zelf is aangepast en heeft daarom geen class, deze is overal daarom dus ook het zelfde -->
 
-  <div class="footer-logo"> <!-- Dit is het zelfde plaatje als linksboven bij de navbar -->
-    <img src="HyperNova.png" alt="HyperNova" id="logo">
+<!-- De footer zelf is aangepast en heeft daarom geen class, deze is overal daarom dus ook het zelfde -->
+<footer>
+  <!-- Dit is het zelfde plaatje als linksboven bij de navbar -->
+  <div class="footer-logo">
+    <img src="/HyperNova.png" alt="HyperNova" id="logo">
   </div>
+  <!-- De container van de footer is net als de section van de banner, maar dan voor de footer en zonder plaatje -->
+  <div class="container_footer">
 
-  <div class="container_footer"> <!-- De container van de footer is net als de section van de banner, maar dan voor de footer en zonder plaatje -->
-    <div class="items_footer"> <!-- Dit is een div-box waarmee ik makkelijk text kolommen kan scheiden van elkaar, dit is net als bij de pc's -->
-      <h1 class="footer-titles"> <!-- Geeft de titel zijn vorm en kleur -->
-        Company 
+    <div class="items_footer">
+      <!-- Geeft de titel zijn vorm en kleur -->
+      <h1 class="footer-titles">
+        Company
       </h1>
 
-      <div class="footer-contents"> <!-- Geeft de content onder de titel zijn vorm en kleur -->
-        <a href="AboutUs.html" class="footer-contents-text">
+      <div class="footer-contents">
+        <a href="/AboutUs.html" class="footer-contents-text">
           About us
         </a>
       </div>
-
+      <!-- Geeft de content onder de titel zijn vorm en kleur -->
       <div class="footer-contents">
         <a href="https://starforgesystems.com/collections/gaming-pcs" class="footer-contents-text">
           Inspiration
@@ -311,9 +322,9 @@
       </div>
 
       <div class="footer-contents">
-        <h2 class="footer-contents-text">
+        <a href="/Pc sites/poster pics_jpg/domme_site.html" class="footer-contents-text">
           FAQs
-        </h2>
+        </a>
       </div>
     </div>
 
@@ -341,7 +352,6 @@
       </div>
     </div>
   </div>
-
 </footer>
 <!---- footer ----->
 

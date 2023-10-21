@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- uitleg staat in Pc1.html -->
 
 <head>
-  <title> Soaring Astroid </title> <!-- Deze sites gaan gecopy paste worden en alle text en plaatjes worden anders, dat is alles -->
+  <title> HyperNova - Soaring Astroid </title>
   <link rel="icon" type="image/x-icon" href="/galaxy.png">
-  <link rel="stylesheet" href="/styles.css"> <!-- Omdat deze file in een folder zit moet er een slash staan zodat er goed verwezen kan worden naar de styles.css. Stel dat ik een plaatje uit een andere folder nodig heb (in dit geval Pc pics), dan moet ik /Pc pics/plaatje i.p.v. Pc pics/plaatje. Voor de rest werkt alles hetzelfde, snapte dit eerst niet maar het is wel logisch -->
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
-<body>
+<body style="background-color: var(--color-border-product-page__poster)">
   <header id="myHeader" class="header">
     <nav class="page-header">
       <div class="logoOffset">
@@ -46,12 +47,109 @@
 </body>
 
 <body>
+  <section
+    style="height: calc(12vh - 6px); background: linear-gradient(to right, var(--color-container_picture), #20172d, var(--color-container_picture));">
+  </section>
 
- <h1 style="color: black;">
-   test
- </h1>
+  <section id="poster" class="Product-page__poster-container"
+    style="background-image: url('/Pc sites/poster pics_jpg/Soaring Astroid poster1.jpg'); height: 62vw;">
+    <div class="Product-page__poster-container-icons">
+      <div id="box1" class="Product-page__poster-icons">
+        <img src="poster pics_jpg/Soaring Astroid poster1.jpg" alt="Soaring Astroid poster1.jpg"
+          class="Product-page__poster-icon-pics">
+      </div>
+
+      <div id="box2" class="Product-page__poster-icons">
+
+        <img src="poster pics_jpg/Soaring Astroid poster2.jpg" alt="Soaring Astroid poster2.jpg"
+          class="Product-page__poster-icon-pics">
+      </div>
+      <div id="box3" class="Product-page__poster-icons">
+
+        <img src="poster pics_jpg/Soaring Astroid poster3.jpg" alt="Soaring Astroid poster3.jpg"
+          class="Product-page__poster-icon-pics">
+      </div>
+    </div>
 
 
+    <div class="Product-page__poster-container-text">
+      <h1 class="Product-page__poster-title">
+        Soaring Astroid
+      </h1>
+      <h2 class="Product-page__poster-intro">
+        €1499,-
+      </h2>
+
+      <p class="Product-page__poster-content">
+        The Soaring Astroid and its counter part the Shining Comet are the best pc's for their price. They are cheap,
+        reliable and they deliver some amazing graphical quality
+        <br />
+        <br />
+      </p>
+
+      <p class="Product-page__poster-content" style="margin-top: 5px;">
+        It features a "GeForce RTX 1660 Ti" with a cooling system and an "Intel Core i5-6400"
+      </p>
+
+      <a href="/Checkout.html" class="Product-page__poster-container-buy_now">
+        <p class="Product-page__poster-buy_now"> Buy It Now </p>
+      </a>
+    </div>
+  </section>
+  <!---- Script voor de icoontjes en de background-images ----->
+
+  <script>
+    var i = 0;
+    var image = [
+      "url('/Pc sites/poster pics_jpg/Soaring Astroid poster1.jpg')",
+      "url('/Pc sites/poster pics_jpg/Soaring Astroid poster2.jpg')",
+      "url('/Pc sites/poster pics_jpg/Soaring Astroid poster3.jpg')"];
+
+    var box_1 = document.getElementById("box1");
+    var box_2 = document.getElementById("box2");
+    var box_3 = document.getElementById("box3");
+
+    box_1.addEventListener('click', function () {
+      i = 0;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    box_2.addEventListener('click', function () {
+      i = 1;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    box_3.addEventListener('click', function () {
+      i = 2;
+      document.getElementById("poster").style.backgroundImage = image[i];
+      border()
+    });
+
+    function border() {
+      if (i == 0) {
+        box_1.style.borderColor = "var(--color-border-product-page__poster-clicked)";
+      }
+      if (i != 0) {
+        box_1.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+      if (i == 1) {
+        box_2.style.borderColor = "var(--color-border-product-page__poster-clicked)";
+      }
+      if (i != 1) {
+        box_2.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+      if (i == 2) {
+        box_3.style.borderColor = "var(--color-border-product-page__poster-clicked)";
+      }
+      if (i != 2) {
+        box_3.style.borderColor = "var(--color-border-product-page__poster)";
+      }
+    }
+  </script>
+
+  <!---- Script voor de icoontjes en de background-images ----->
 </body>
 
 <footer>
@@ -97,9 +195,9 @@
       </div>
 
       <div class="footer-contents">
-        <h2 class="footer-contents-text">
+        <a href="/Pc sites/poster pics_jpg/domme_site.html" class="footer-contents-text">
           FAQs
-        </h2>
+        </a>
       </div>
     </div>
 

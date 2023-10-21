@@ -38,13 +38,12 @@ body {
   --color-pcInfo-text: #ffffff;
   --color-pcInfo-text-hovered: #ba5dfd;
   --color-container_picture: #290b81;
-  --color-text-intro: #977be9;
   --color-pictures-border-clicked: #3a99eb;
   --color-border-product-page__poster: #aba9b1;
   --color-border-product-page__poster-clicked: #4e87f7;
+  --color-text-intro: #977be9;
   --color-border-product-page__poster-clicked-godslap: #db4f4f;
-  --color-border-product-page__poster-clicked-lunarian: #db7c39;
-  --color-border-product-page__poster-clicked-prime: #41c952;
+  --color-border-pr
 
   /* Deze zijn gekopieerd van andere sites om mee te testen, --test is wel zelf gemaakt */
   --light: #ffffff;
@@ -193,16 +192,13 @@ body {
 
 
 /***** Dingen voor de video *****/
-.container-video {
+#background-video {
+  /* voor de video, het doet niks */
   width: 100%;
-  height: 100vh;
+  height: 10%;
+  z-index: 1;
 }
 
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 /***** Dingen voor de videos *****/
 
 
@@ -392,22 +388,21 @@ body {
 
 
 /***** Dingen voor de about us ******/
-/**** dit gaat over de hele gradient die de achtergrond vormt voor de pagina ****/ 
 #aboutusbody {
   background-image: linear-gradient(90deg, #494949 0%, black 50%, #494949 100%);
 }
 
-/*** deze code is voor een gradient achter het pc plaatje, dit zorgt ervoor dat als het plaatje zou falen te laden, het er alsnog verzorgd uitziet ***/
+/*** ik kan maar niet die gradient net wat korter krijgen dus idk laat het maar zo staan***/
 #imageau {
   background: linear-gradient(90deg, black 20%, #00d4ff 41%, black 85%);
   height: 461px;
 }
-/*** dit gaat natuurlijk over het plaatje, de display block is om te zorgen dat het plaatje hoekig is, en de margin top is zodat het plaatje niet onder de navbar staat ***/
+
 #imagepc {
   display: block;
   margin-top: 100px;
 }
-/*** deze css code gaat over de decoratie van het grootste kopje dat in het midden van de pagina staat ***/
+
 #grootkopje {
   font-family: "priori-sans", sans-serif;
   font-size: 30px;
@@ -418,7 +413,7 @@ body {
 }
 
 /***** de opmaak voor de kopjes en de subteksten *****/
-/*** dit gaat over de grote kopjes zoals Our mission ***/
+/*** dit gaat over de grote tekest ***/
 .kopje {
   font-family: "priori-sans", sans-serif;
   font-size: 28px;
@@ -437,7 +432,7 @@ body {
   margin-top: 0px;
 }
 
-/*** dit is de div waar de 3 andere kolomen in staan, de code zorgt ervoor de de div een regelmatige gap hebben en in een row staan ***/
+/*** dit is de div waar de 3 andere kolomen in staan ***/
 #kolom1 {
   display: flex;
   justify-content: space-around;
@@ -458,7 +453,7 @@ body {
   background-image: linear-gradient(#504e4e, transparent);
 }
 
-
+/***** Dingen voor de about us ******/
 
 
 
@@ -651,12 +646,12 @@ footer {
   align-items: flex-start;
 
   margin-right: 8vw;
-  background-color: rgb(80 80 83 / 80%);
+  background-color: rgb(80 80 83 / 95%);
   border: 3px solid black;
   border-radius: 10px;
   /* het zijn pixel waarde want met text werken andere waarde enorm slecht */
   /* ook zijn sommige namen groter dan andere dus daar is de style aangepast */
-  /* dit is bij: Nebula System en Bright SuperNova  */
+  /* dit is bij: Nebula System,  */
   height: 570px;
   width: 380px;
 }
