@@ -203,6 +203,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 /***** Dingen voor de videos *****/
 
 
@@ -392,7 +393,7 @@ body {
 
 
 /***** Dingen voor de about us ******/
-/**** dit gaat over de hele gradient die de achtergrond vormt voor de pagina ****/ 
+/**** dit gaat over de hele gradient die de achtergrond vormt voor de pagina ****/
 #aboutusbody {
   background-image: linear-gradient(90deg, #494949 0%, black 50%, #494949 100%);
 }
@@ -402,11 +403,13 @@ body {
   background: linear-gradient(90deg, black 20%, #00d4ff 41%, black 85%);
   height: 461px;
 }
+
 /*** dit gaat natuurlijk over het plaatje, de display block is om te zorgen dat het plaatje hoekig is, en de margin top is zodat het plaatje niet onder de navbar staat ***/
 #imagepc {
   display: block;
   margin-top: 100px;
 }
+
 /*** deze css code gaat over de decoratie van het grootste kopje dat in het midden van de pagina staat ***/
 #grootkopje {
   font-family: "priori-sans", sans-serif;
@@ -457,10 +460,6 @@ body {
   text-align: center;
   background-image: linear-gradient(#504e4e, transparent);
 }
-
-
-
-
 
 /***** De code voor de footer *****/
 footer {
@@ -519,6 +518,8 @@ footer {
   /* zorgt voor het gat tussen de content van de footer */
   margin: 0;
   margin-bottom: 3vh;
+  cursor: pointer;
+  /* Als je alleen de werkende links wil dan raad ik het aan om dit uit te zetten */
 }
 
 .footer-contents-text {
@@ -634,6 +635,7 @@ footer {
   flex-wrap: nowrap;
   height: auto;
   width: 12vw;
+  cursor: pointer;
 }
 
 .Product-page__poster-icon-pics {
